@@ -1507,6 +1507,88 @@
                             "show": true
                         }
                     ]
+                }, 
+                {
+                    "aliasColors": {}, 
+                    "bars": false, 
+                    "datasource": "Prometheus", 
+                    "decimals": 5, 
+                    "editable": true, 
+                    "error": false, 
+                    "fill": 2, 
+                    "grid": {}, 
+                    "id": 55, 
+                    "legend": {
+                        "alignAsTable": true, 
+                        "avg": true, 
+                        "current": false, 
+                        "max": true, 
+                        "min": true, 
+                        "rightSide": false, 
+                        "show": true, 
+                        "total": false, 
+                        "values": true
+                    }, 
+                    "lines": true, 
+                    "linewidth": 2, 
+                    "links": [], 
+                    "minSpan": null, 
+                    "nullPointMode": "null", 
+                    "percentage": false, 
+                    "pointradius": 5, 
+                    "points": false, 
+                    "renderer": "flot", 
+                    "seriesOverrides": [], 
+                    "span": 6, 
+                    "stack": false, 
+                    "steppedLine": false, 
+                    "targets": [
+                        {
+                            "calculatedInterval": "2m", 
+                            "datasourceErrors": {}, 
+                            "errors": {}, 
+                            "expr": "rate(mysql_global_status_wsrep_evs_repl_latency{instance=\"$host\"}[$interval]) or irate(mysql_global_status_wsrep_evs_repl_latency{instance=\"$host\"}[5m])", 
+                            "interval": "$interval", 
+                            "intervalFactor": 1, 
+                            "legendFormat": "{{aggregator}}", 
+                            "metric": "", 
+                            "refId": "A", 
+                            "step": 300
+                        }
+                    ], 
+                    "thresholds": [], 
+                    "timeFrom": null, 
+                    "timeShift": null, 
+                    "title": "Galera Replication Latency", 
+                    "tooltip": {
+                        "msResolution": false, 
+                        "shared": true, 
+                        "sort": 0, 
+                        "value_type": "cumulative"
+                    }, 
+                    "type": "graph", 
+                    "xaxis": {
+                        "mode": "time", 
+                        "name": null, 
+                        "show": true, 
+                        "values": []
+                    }, 
+                    "yaxes": [
+                        {
+                            "format": "s", 
+                            "logBase": 1, 
+                            "max": null, 
+                            "min": 0, 
+                            "show": true
+                        }, 
+                        {
+                            "format": "short", 
+                            "logBase": 1, 
+                            "max": null, 
+                            "min": 0, 
+                            "show": true
+                        }
+                    ]
                 }
             ], 
             "repeat": null, 
@@ -1542,7 +1624,7 @@
             "titleSize": "h6"
         }
     ], 
-    "schemaVersion": 13, 
+    "schemaVersion": 14, 
     "sharedCrosshair": true, 
     "style": "dark", 
     "tags": [
