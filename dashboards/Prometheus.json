@@ -1,6 +1,21 @@
 {
     "annotations": {
-        "list": []
+        "list": [
+            {
+                "builtIn": 1,
+                "datasource": "-- Grafana --",
+                "enable": true,
+                "hide": false,
+                "iconColor": "#e0752d",
+                "limit": 100,
+                "name": "PMM Annotations",
+                "showIn": 0,
+                "tags": [
+                    "pmm_annotation"
+                ],
+                "type": "tags"
+            }
+        ]
     },
     "editable": true,
     "gnetId": null,
@@ -10,7 +25,7 @@
     "links": [
         {
             "icon": "dashboard",
-            "includeVars": false,
+            "includeVars": true,
             "keepTime": true,
             "tags": [
                 "QAN"
@@ -22,7 +37,7 @@
         },
         {
             "asDropdown": true,
-            "includeVars": false,
+            "includeVars": true,
             "keepTime": true,
             "tags": [
                 "OS"
@@ -33,7 +48,7 @@
         },
         {
             "asDropdown": true,
-            "includeVars": false,
+            "includeVars": true,
             "keepTime": true,
             "tags": [
                 "MySQL"
@@ -44,7 +59,7 @@
         },
         {
             "asDropdown": true,
-            "includeVars": false,
+            "includeVars": true,
             "keepTime": true,
             "tags": [
                 "MongoDB"
@@ -55,7 +70,7 @@
         },
         {
             "asDropdown": true,
-            "includeVars": false,
+            "includeVars": true,
             "keepTime": true,
             "tags": [
                 "HA"
@@ -66,7 +81,7 @@
         },
         {
             "asDropdown": true,
-            "includeVars": false,
+            "includeVars": true,
             "keepTime": true,
             "tags": [
                 "Cloud"
@@ -88,7 +103,7 @@
         },
         {
             "asDropdown": true,
-            "includeVars": false,
+            "includeVars": true,
             "keepTime": true,
             "tags": [
                 "PMM"
@@ -4534,6 +4549,27 @@
             "showTitle": true,
             "title": "System Level Metrics",
             "titleSize": "h6"
+        },
+        {
+            "collapse": false,
+            "height": "100px",
+            "panels": [
+                {
+                    "content": "To simplify problem detection, you can download <a href=\"/managed/logs.zip\">server logs</a>. Please include this file if you are submitting a bug report   ",
+                    "id": 57,
+                    "links": [],
+                    "mode": "html",
+                    "span": 12,
+                    "title": "",
+                    "type": "text"
+                }
+            ],
+            "repeat": null,
+            "repeatIteration": null,
+            "repeatRowId": null,
+            "showTitle": true,
+            "title": "PMM Server Logs",
+            "titleSize": "h6"
         }
     ],
     "schemaVersion": 14,
@@ -4613,6 +4649,7 @@
         "to": "now"
     },
     "timepicker": {
+        "hidden": false,
         "now": true,
         "refresh_intervals": [
             "5s",
