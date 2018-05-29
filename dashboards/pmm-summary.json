@@ -121,25 +121,12 @@
       "type": "pmm-system-summary-app-panel"
     },
     {
-      "collapsed": false,
-      "gridPos": {
-        "h": 1,
-        "w": 24,
-        "x": 0,
-        "y": 990 
-      },
-      "id": 1358,
-      "panels": [],
-      "title": "Copyrights & Legal",
-      "type": "row"
-    },
-    {
-      "content": "<center >\n  <p>MySQL and InnoDB are trademarks of Oracle Corp. Proudly running Percona Server. Copyright © 2006-2018 Percona LLC.</p>\n  <div style=\"text-align:center;\">\n    <a href=\"https://percona.com/terms-use\" style=\"display: inline;\">Terms of Use</a> | \n    <a href=\"https://percona.com/privacy-policy\" style=\"display: inline;\">Privacy</a> | \n    <a href=\"https://percona.com/copyright-policy\" style=\"display: inline;\">Copyright</a> | \n    <a href=\"https://percona.com/legal\" style=\"display: inline;\">Legal</a>\n  </div>\n</center>\n<hr>\n<link rel=\"stylesheet\" type=\"text/css\" href=\"//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css\" />\n<script src=\"//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js\"></script>\n<script>\nfunction bbb(){\n  \n  setTimeout(function (){ \n  window.cookieconsent.initialise({\n    \"palette\": {\n      \"popup\": {\n        \"background\": \"#eb6c44\",\n        \"text\": \"#ffffff\"\n      },\n      \"button\": {\n        \"background\": \"#f5d948\"\n      }\n    },\n    \"theme\": \"classic\",\n    \"content\": {\n      \"message\": \"This site uses cookies and other tracking technologies to assist with navigation, analyze your use of our products and services, assist with promotional and marketing efforts, allow you to give feedback, and provide content from third parties. If you do not want to accept cookies, adjust your browse\",\n      \"dismiss\": \"Allow cookies\",\n      \"link\": \"Cookie Policy\",\n      \"href\": \"https://www.percona.com/cookie-policy\"\n    }\n  })},3000)};\n  \n  \n  window.addEventListener(\"load\",bbb());\n\n\n\n</script>",
+      "content": "<div style=\"\" id=\"privacy-footer\">    \n  <div style=\"text-align:center;\">\n  <p>MySQL and InnoDB are trademarks of Oracle Corp. Proudly running Percona Server. Copyright © 2006-2018 Percona LLC.</p>\n    <a href=\"https://percona.com/terms-use\" style=\"display: inline;\">Terms of Use</a> | \n    <a href=\"https://percona.com/privacy-policy\" style=\"display: inline;\">Privacy</a> | \n    <a href=\"https://percona.com/copyright-policy\" style=\"display: inline;\">Copyright</a> | \n    <a href=\"https://percona.com/legal\" style=\"display: inline;\">Legal</a>\n  </div>\n</div>\n<hr>\n<link rel=\"stylesheet\" type=\"text/css\" href=\"//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css\" />\n<script src=\"//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js\"></script>\n<script>\nfunction bbb(){\n  \n  setTimeout(function (){ \n  window.cookieconsent.initialise({\n    \"palette\": {\n      \"popup\": {\n        \"background\": \"#eb6c44\",\n        \"text\": \"#ffffff\"\n      },\n      \"button\": {\n        \"background\": \"#f5d948\"\n      }\n    },\n    \"theme\": \"classic\",\n    \"content\": {\n      \"message\": \"This site uses cookies and other tracking technologies to assist with navigation, analyze your use of our products and services, assist with promotional and marketing efforts, allow you to give feedback, and provide content from third parties. If you do not want to accept cookies, adjust your browse\",\n      \"dismiss\": \"Allow cookies\",\n      \"link\": \"Cookie Policy\",\n      \"href\": \"https://www.percona.com/cookie-policy\"\n    }\n  })},3000)};\n  \nfunction fixFooterPosition() {\n  var privacyFooter = document.getElementById('privacy-footer');\n  var footerGridWrapper = privacyFooter.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement;\n  var wrapper = footerGridWrapper.parentElement.parentElement;\n  var queryTable = (wrapper.childNodes[0]).children[0];\n  var toolPanelWrapper = privacyFooter.parentElement.parentElement.parentElement;\n  var toolPanel = toolPanelWrapper.parentElement.getElementsByClassName('panel-title-container')[0];\n\n  toolPanel.addEventListener('mousedown', function(event) {\n    event.preventDefault();\n    event.stopPropagation();\n    footerGridWrapper.setAttribute('style', 'transform: translate(0px, 0px); height: auto;');\n    console.log('toolPanel.addEventListener');\n  }, false);\n  \n  queryTable.setAttribute('style', 'height: auto;');\n  footerGridWrapper.setAttribute('style', 'transform: translate(0px, 0px); height: auto;');\n  console.log('fixFooterPosition');\n}\n\nwindow.addEventListener(\"load\", bbb(), fixFooterPosition());\n\n</script>",
       "gridPos": {
         "h": 3,
         "w": 24,
         "x": 0,
-        "y": 991 
+        "y": 15
       },
       "id": 1360,
       "links": [],
